@@ -1,0 +1,17 @@
+#root {
+  max-width: 1280px;
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  /* text-align: center; */
+}
+
+.table__head--Acceptance {
+  padding-left: 20px;
+}
+.table__head--Difficulty {
+  padding-left: 20px;
+}
+
+/* .table-row {
+  padding-left: 100px;
+} */
