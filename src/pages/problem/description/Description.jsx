@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-import { Box, Tab } from '@mui/material';
-import { TabContext, TabList, TabPanel } from '@mui/lab';
-import './problem.css'
+import React from "react";
+import './description.css';
 
 const sampleProblem =   {
     title: "1. 3Sum",
@@ -20,39 +18,10 @@ const sampleProblem =   {
     constraints: ["3 <= nums.length <= 3000","-105 <= nums[i] <= 105"]
 }
 
-const Problems = () => {
+const Description = () => {
     return (
-        <MuiTabs />
+        <ProblemStatement />
     );
-}
-
-
-const MuiTabs = () => {
-  const [value, setValue] = useState('1')
-  
-  const handleChange = (event, newValue) => {
-    setValue(newValue)
-  }
-  return (
-    <Box>
-      <TabContext value={value}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <TabList
-            onChange={handleChange}
-            aria-label='Tabs example'
-            textColor='secondary'
-            indicatorColor='secondary'>
-            <Tab label='Tab One'value='1'/>
-            <Tab label='Tab Two' value='2'/>
-            <Tab label='Tab Three' value='3' />
-          </TabList>
-        </Box>
-        <TabPanel value='1'><ProblemStatement/></TabPanel>
-        <TabPanel value='2'>Item Two</TabPanel>
-        <TabPanel value='3'>Item Three</TabPanel>
-      </TabContext>
-    </Box>
-  );
 }
 
 const ProblemStatement = () => {
@@ -69,4 +38,5 @@ const ProblemStatement = () => {
       </React.Fragment>
     );
 }
-export default Problems;
+
+export default Description;
