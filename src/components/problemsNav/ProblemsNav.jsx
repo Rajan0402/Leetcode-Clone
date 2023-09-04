@@ -1,12 +1,9 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
-import './navbar.css'
+import './problemsNav.css'
 
-export default function Navbar() {
+export default function ProblemsNav() {
   return (
     <nav className="nav">
-      {/* <Link to="/">
-        Site Name
-      </Link> */}
       <ul className="problems__navbar">
         <CustomLink to="/description">Description</CustomLink>
         <CustomLink to="/solution">Solution</CustomLink>
@@ -16,6 +13,7 @@ export default function Navbar() {
   )
 }
 
+// eslint-disable-next-line react/prop-types
 function CustomLink({ to, children, ...props }) {
   const resolvedPath = useResolvedPath(to)
   const isActive = useMatch({ path: resolvedPath.pathname, end: true })

@@ -1,7 +1,12 @@
-body {
-    max-width: 720px;
-}
-
 ul {
     list-style-type: none;
+}
+
+.problem_page {
+    display: flex;
+    flex-direction: row;
+}
+
+.Problem_container {
+    padding-left: 2%;
 }
